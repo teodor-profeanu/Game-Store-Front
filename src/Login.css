@@ -1,0 +1,78 @@
+.login-rect {
+    width: 550px;
+    height: 310px;
+    background-color: #1f2125;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+    padding: 50px;
+    color: #1995ff;
+    font-size: 13px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 2.5;
+    border-radius: 20px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .register-rect {
+    width: 550px;
+    height: 500px;
+    background-color: #1f2125;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+    padding: 50px;
+    color: #1995ff;
+    font-size: 13px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    line-height: 2.5;
+    border-radius: 20px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .text-field {
+    background-color: #e8f0fe;
+    color: #000000;
+    width: 550px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    border-radius: 3px;
+  }
+
+  .for-link{
+    color: #a8a8a8;
+    font-size: 13px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+  }
+
+  .login-button{
+    background: linear-gradient(to right, #06beff, #2d73ff);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 300px;
+    font-size: 17px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    margin-top: 40px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .login-button:hover{
+    background: linear-gradient(to right, #55d2ff, #2d73ff);
+  }

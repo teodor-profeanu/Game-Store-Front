@@ -1,0 +1,98 @@
+.game {
+    background-color: #223a4c;
+    color: #bec5d2;
+    font-size: 25px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    height: 90px;
+    width: 825px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .game:hover{
+    color: #ffffff;
+  }
+
+  .image {
+    height: 90px;
+    width: 270px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  .title{
+    font-size: 25px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    top: -145%;
+    left: 285px;
+  }
+
+  .rating{
+    color: #9b9b9b;
+    font-size: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    top: -180%;
+    left: 285px;
+  }
+
+  .price{
+    color: #ffffff;
+    font-size: 22px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    top: -220px;
+    left: 88%;
+  }
+
+  .price-group{
+    position: relative;
+    top: -220px;
+    left: 88%;
+  }
+
+  .price-old{
+    color: #9b9b9b;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    text-decoration: line-through;
+    position: relative;
+  }
+
+  .price-new{
+    color: #bee233;
+    font-size: 22px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    top: -30px;
+  }
+
+  .discount{
+    height: 40px;
+    width: 60px;
+    background-color: #4c6b22;
+    position: relative;
+    top: -295px;
+    left: 75%;
+    transform: translateY(-50%);
+  }
+
+  .discount-text{
+    color: #bee233;
+    font-size: 22px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    position: relative;
+    top: -28%;
+    left: 50%;
+    transform: translateX(-45%);
+  }
