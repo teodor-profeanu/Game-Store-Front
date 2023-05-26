@@ -1,0 +1,103 @@
+.user-banner{
+    height: 200px;
+    width: 825px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120px;
+    z-index: -2;
+    color: #9b9b9b;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin-right: 20px;
+    line-height: 2;
+}
+
+.user-name{
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+    position: relative;
+    top: -110%;
+    left: 250px
+}
+
+.user-bio{
+    width: 550px;
+    position: relative;
+    top: -110%;
+    left: 250px
+}
+
+.user-image {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+.user-games-position{
+    width: 825px;
+    left: 50%;
+    top:405px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: -2;
+    justify-content: center;
+}
+
+.user-owned{
+    position: relative;
+    top: -75%;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    position: relative;
+}
+
+.edit-button{
+    background: linear-gradient(to right, #06beff, #2d73ff);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 90px;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    margin-left: 30px;
+    top: 115px;
+    left: 690px;
+    z-index: -2;
+  }
+
+  .edit-button:hover{
+    background: linear-gradient(to right, #55d2ff, #2d73ff);
+  }
+
+  .logout-button{
+    background: linear-gradient(to right, #c91717, #b90000);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 90px;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    margin-left: 30px;
+    top: 115px;
+    left: 690px;
+    z-index: -2;
+  }
+
+  .logout-button:hover{
+    background: linear-gradient(to right, #e20000, #b90000);
+  }

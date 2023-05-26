@@ -11,6 +11,9 @@ export default function Game({game}) {
       <div className="rating">
         Rating:{" "+game.rating.toFixed(2) + " ★"}
       </div>
+      <div className='tags'>
+        {game.tags.map(item => item.name).join(", ")}
+      </div>
       <div>
       {
         (game.discountPercent === 0) ?

@@ -84,7 +84,6 @@ body {
 
   .section-button-container{
     display: flex;
-    align-items: flex-start;
     position: absolute;
     top: 100px;
     left: 50%;

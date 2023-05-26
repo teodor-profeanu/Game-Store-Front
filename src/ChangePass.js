@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import * as utils from './Utils';
 
 
-export default function Login() {
+export default function ChangePass() {
 
   const { clickLogin } = utils.useLogin();
   const { clickHome } = utils.useHome();
@@ -24,20 +24,19 @@ export default function Login() {
       <div className="rectangle1"></div>
       <div className="login-rect">
         <div>
-            SIGN IN WITH EMAIL OR USERNAME
+            CURRENT PASSWORD
         </div>
         <div>
-            <input type='text' className='text-field'></input>
+        <input type='password' className='text-field'></input>
         </div>
         <div>
-            PASSWORD
+            NEW PASSWORD
         </div>
         <div>
             <input type='password' className='text-field'></input>
         </div>
-        <Link to="/register" className='for-link'>Don't have an account? Create one now!</Link>
         <div>
-            <button className='login-button'>Sign in</button>
+            <button className='login-button'>Change password</button>
         </div>
       </div>
     </div>

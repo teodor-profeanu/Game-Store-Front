@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import * as utils from './Utils';
 
 
-export default function Login() {
+export default function Edit() {
 
   const { clickLogin } = utils.useLogin();
   const { clickHome } = utils.useHome();
@@ -14,7 +14,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={utils.theme}>
-    <div className='diff-back'>
+    <div>
       <div className="ribbon-button-container">
         <button className="logo" onClick={clickHome}/>
         <button className="ribbon-button" onClick={clickStore}>Store</button>
@@ -22,22 +22,27 @@ export default function Login() {
         <button className="ribbon-button" onClick={clickLogin}>Profile</button>
       </div>
       <div className="rectangle1"></div>
-      <div className="login-rect">
+      <div className="register-rect">
         <div>
-            SIGN IN WITH EMAIL OR USERNAME
+            NICKNAME
         </div>
         <div>
             <input type='text' className='text-field'></input>
         </div>
         <div>
-            PASSWORD
+            PROFILE PICTURE LINK
         </div>
         <div>
-            <input type='password' className='text-field'></input>
+            <input type='text' className='text-field'></input>
         </div>
-        <Link to="/register" className='for-link'>Don't have an account? Create one now!</Link>
         <div>
-            <button className='login-button'>Sign in</button>
+            DESCRIPTION
+        </div>
+        <div>
+            <textarea className='text-field-large'></textarea>
+        </div>
+        <div>
+            <button className='login-button'>Confirm edit</button>
         </div>
       </div>
     </div>

@@ -10,6 +10,18 @@
     overflow: hidden;
   }
 
+  .user-info{
+    text-align: right;
+    color: #9b9b9b;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    left: -3%;
+    top: -170%;
+    line-height: 20px;
+  }
+
   .game:hover{
     color: #ffffff;
   }
@@ -42,19 +54,30 @@
     left: 285px;
   }
 
+  .tags{
+    color: #9b9b9b;
+    font-size: 12px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    position: relative;
+    top: -200%;
+    left: 285px;
+    height: 30px;
+  }
+
   .price{
     color: #ffffff;
     font-size: 22px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
     position: relative;
-    top: -220px;
+    top: -250px;
     left: 88%;
   }
 
   .price-group{
     position: relative;
-    top: -220px;
+    top: -255px;
     left: 88%;
   }
 
@@ -81,7 +104,7 @@
     width: 60px;
     background-color: #4c6b22;
     position: relative;
-    top: -295px;
+    top: -330px;
     left: 75%;
     transform: translateY(-50%);
   }

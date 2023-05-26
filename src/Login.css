@@ -49,6 +49,20 @@
     border-radius: 3px;
   }
 
+  .text-field-large {
+    background-color: #e8f0fe;
+    color: #000000;
+    width: 550px;
+    height: 120px;
+    border: none;
+    font-size: 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    resize: none;
+  }
+
   .for-link{
     color: #a8a8a8;
     font-size: 13px;

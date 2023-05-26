@@ -1,31 +1,23 @@
 import React from 'react'
-import './FrontPage.css';
+import './Store.css';
 import './Login.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import * as utils from './Utils';
 
 
 export default function Register() {
-    const navigate = useNavigate();
-    const clickLogin = () => {navigate("/login")};
-    const clickHome = () => {navigate("/")};
-    const theme = createTheme({
-        palette: {
-          primary: {
-            main: '#ffffff',
-          },
-          secondary: {
-            main: '#3994bc',
-          },
-        },
-      });
+
+  const { clickLogin } = utils.useLogin();
+  const { clickHome } = utils.useHome();
+  const { clickStore } = utils.useStore();
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={utils.theme}>
     <div>
       <div className="ribbon-button-container">
         <button className="logo" onClick={clickHome}/>
-        <button className="ribbon-button" onClick={clickHome}>Store</button>
+        <button className="ribbon-button" onClick={clickStore}>Store</button>
         <button className="ribbon-button">Library</button>
         <button className="ribbon-button" onClick={clickLogin}>Profile</button>
       </div>
