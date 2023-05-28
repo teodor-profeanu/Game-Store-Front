@@ -1,6 +1,16 @@
 import { useNavigate } from 'react-router-dom';
 import { createTheme } from '@mui/material/styles';
 
+export const loginURL = "http://localhost:8080/user/login"
+export const getUserURL = "http://localhost:8080/user"
+export const registerURL = "http://localhost:8080/user/register"
+export const editURL = "http://localhost:8080/user/edit"
+export const changeURL = "http://localhost:8080/user/change-password"
+export const getGameURL = "http://localhost:8080/game"
+export const getReviewsURL = "http://localhost:8080/reviews"
+export const deleteReviewURL = "http://localhost:8080/review/delete"
+export const addReviewURL = "http://localhost:8080/review/add"
+
 export const theme = createTheme({
     palette: {
       primary: {
@@ -30,6 +40,17 @@ export const useLogin = () => {
         clickLogin
         };
     }
+  };
+
+  export const useUser = () => {
+    const navigate = useNavigate();
+    const clickUser = () => {
+      if(loggedUser.id!==0)
+        navigate('/user/'+loggedUser.id);
+    };
+    return {
+      clickUser
+    };
   };
 
   export const useHome = () => {
@@ -72,32 +93,39 @@ export const useLogin = () => {
     };
   };
 
-  export let loggedUser = {
-    id: 1,
-    username: "user",
-    email: "to@gmail.com",
-    password: "qwertyui",
+  export const useGame = (id) => {
+    const navigate = useNavigate();
+    const clickGame = () => {
+      navigate('/game/'+id);
+    };
+    return {
+      clickGame
+    };
+  };
+
+  export const useReview = (id) => {
+    const navigate = useNavigate();
+    const clickReview = () => {
+      navigate('/review/'+id);
+    };
+    return {
+      clickReview
+    };
+  };
+
+  export let loggedUser = localStorage.getItem("user") == null || localStorage.getItem("user") == "" ? { 
+    id: 0,
+    username: "",
+    email: "",
+    password: "",
     permissionId: 3,
-    dateJoined: "2023-05-23",
+    dateJoined: "",
     nickname: null,
     iconURL: null,
     bio: "",
-    games: [
-        {
-            id: 1,
-            name: "Valorant",
-            developerId: 2,
-            releaseDate: "2023-05-23",
-            priceEuro: 55.0,
-            sales: 0,
-            iconURL: "",
-            description: "joc stas",
-            nrOfReviews: 0,
-            rating: 0.0,
-            discountPercent: 0,
-            owned: true,
-            hoursPlayed: 5.0,
-            lastPlayed: "2023-05-23"
-        }
-    ]
-};
+    games: []
+} : JSON.parse(localStorage.getItem("user"));
+
+export const setLoggedUser = (user) =>{
+  loggedUser = user;
+}

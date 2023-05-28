@@ -25,6 +25,7 @@
 
 .user-bio{
     width: 550px;
+    height:300px;
     position: relative;
     top: -110%;
     left: 250px
@@ -50,8 +51,8 @@
 }
 
 .user-owned{
-    position: relative;
-    top: -75%;
+    position: absolute;
+    top: -350px;
     color: white;
     font-size: 25px;
     font-weight: 300;
@@ -69,10 +70,7 @@
     font-size: 15px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
-    position: relative;
     margin-left: 30px;
-    top: 115px;
-    left: 690px;
     z-index: -2;
   }
 
@@ -91,13 +89,18 @@
     font-size: 15px;
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 400;
-    position: relative;
     margin-left: 30px;
-    top: 115px;
-    left: 690px;
     z-index: -2;
   }
 
   .logout-button:hover{
     background: linear-gradient(to right, #e20000, #b90000);
   }
+
+.button-group{
+  top:350px;
+  left:50%;
+  transform: translateX(-13%);
+  position: absolute;
+  z-index: -2;
+}

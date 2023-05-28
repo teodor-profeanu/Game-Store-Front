@@ -1,0 +1,122 @@
+.section-image {
+    height: 290px;
+    width: 870px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  .whole{
+    width: 870px;
+    height: 870px;
+  }
+
+  .section-title{
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    left: 50px;
+    position: relative;
+    top: -130px;
+  }
+
+  .buy-button{
+    background: linear-gradient(to right, #75b022, #588a1b);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 160px;
+    font-size: 17px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    margin-top: 40px;
+  }
+
+  .buy-button:hover{
+    background: linear-gradient(to right, #90e715, #588a1b);
+  }
+
+  .section-imgs {
+    height: 360px;
+    width: 480px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+  }
+
+  .section-page{
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .rectangle7 {
+    width: 770px;
+    height: 450px;
+    background: linear-gradient(to right,rgba(19, 34, 46, 0), rgb(19, 34, 46));
+    position: absolute;
+    top: 363px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -3;
+  }
+
+  .review-block{
+    position: absolute;
+    width: 770px;
+    top: 620px;
+    font-size: 15px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+  }
+
+.section-price{
+  display: inline-block;
+  background-color: #1f1f1f;
+  position: absolute;
+  top: 294px;
+  padding-left: 240px;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  padding-right: 10px;
+  z-index: -2;
+  font-size: 17px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.hrs-and-last{
+  display: inline-block;
+  position: absolute;
+  top: 294px;
+  font-size: 17px;
+  margin-left: 340px;
+  padding-top: 3px;
+  padding-bottom: 1px;
+  padding-right: 10px;
+}
+
+.leave-review{
+  background: linear-gradient(to right, #06beff, #2d73ff);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  width: 150px;
+  font-size: 15px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 400;
+  position: absolute;
+  top: 540px;
+  left: 329px;
+}
+
+.leave-review:hover{
+  background: linear-gradient(to right, #55d2ff, #2d73ff);
+}

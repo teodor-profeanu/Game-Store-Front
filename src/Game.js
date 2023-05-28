@@ -1,9 +1,13 @@
 import React, {useState} from 'react'
 import './Game.css';
+import * as utils from './Utils';
 
 export default function Game({game}) {
+
+  const { clickGame } = utils.useGame(game.id);
+
   return (
-    <div className = "game">
+    <div className = "game" onClick={clickGame}>
       <img className="image" style={{ backgroundImage: `url(${game.iconURL})`}} />
       <div className="title">
         {game.name}

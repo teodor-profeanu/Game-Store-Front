@@ -79,14 +79,35 @@ const nextPage = () =>{
   setPage(page+1);
   setStart (start + gamesPerPage);
   setEnd (end + gamesPerPage);
-  console.log(page, start, end);
 }
 const prevPage = () =>{
   setPage(page-1);
   setStart (start - gamesPerPage);
   setEnd (end - gamesPerPage);
-  console.log(page, start, end);
 }
+
+const [tags, setTags] = useState([
+  {
+      id: 1,
+      name: "Action"
+  },
+  {
+      id: 2,
+      name: "Open world"
+  },
+  {
+      id: 3,
+      name: "Racing"
+  },
+  {
+      id: 4,
+      name: "Survival"
+  },
+  {
+      id: 5,
+      name: "Adventure"
+  }
+]);
 
   return (
     <ThemeProvider theme={utils.theme}>
@@ -94,7 +115,6 @@ const prevPage = () =>{
         <div className="ribbon-button-container">
           <button className="logo" onClick={clickHome}/>
           <button className="ribbon-button" onClick={clickStore}>Store</button>
-          <button className="ribbon-button">Library</button>
           <button className="ribbon-button" onClick={clickLogin}>Profile</button>
         </div>
         <div className="section-button-container">
@@ -142,7 +162,12 @@ const prevPage = () =>{
             <div>
               tag:
               <select className='dropdown2'>
-                <option value="nothing">nothing</option>
+                <option value={0} key={0}>&lt;nothing&gt;</option>
+                {tags.map((tag)=>
+                  <option key={tag.id} value={tag.id}>
+                    {tag.name}
+                  </option>
+                )}
               </select>
             </div>
           </div>

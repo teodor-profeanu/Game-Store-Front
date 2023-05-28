@@ -15,12 +15,10 @@ export default function FrontPage() {
         <div className="ribbon-button-container">
           <button className="logo" onClick={clickHome}/>
           <button className="ribbon-button" onClick={clickStore}>Store</button>
-          <button className="ribbon-button">Library</button>
           <button className="ribbon-button" onClick={clickLogin}>Profile</button>
         </div>
         <div className="rectangle1"></div>
       </div>
-      <div className='rectanle5'/>
       </ThemeProvider>
     </div>
   )

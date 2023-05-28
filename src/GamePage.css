@@ -1,0 +1,21 @@
+  .whole-section {
+    width: 870px;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: -2;
+    justify-content: center;
+  }
+
+  .rectangle8 {
+    width: 870px;
+    height: 1700px;
+    background: linear-gradient(to bottom, #2a475e, #1b2838);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -4;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
