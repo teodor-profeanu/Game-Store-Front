@@ -1,5 +1,5 @@
 import { React, useState, useEffect  } from 'react'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import * as utils from './Utils';
 import { useParams } from 'react-router-dom';
 import GameSection from './GameSection';

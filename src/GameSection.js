@@ -9,6 +9,7 @@ import * as utils from './Utils';
 
 export default function GameSection({ game }) {
 
+  const { clickLogin } = utils.useLogin();
   const { clickReview } = utils.useReview(game.id);
 
   const [page, setPage] = useState(1)
@@ -48,18 +49,51 @@ export default function GameSection({ game }) {
     setEnd(end - reviewsPerPage);
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     fetch(`${utils.getReviewsURL}?gameId=${game.id}&userId=${utils.loggedUser.id}`)
-    .then(response => response.json())
-    .then(res => {
-      if (res.status === 200) {
-        setReviews(res.object);
-        setReviewPageNr(Math.ceil(reviews.length / reviewsPerPage));
-      }
-    }).catch(error => {
-      console.log("Error:", error);
-    });
+      .then(response => response.json())
+      .then(res => {
+        if (res.status === 200) {
+          setReviews(res.object);
+          setReviewPageNr(Math.ceil(reviews.length / reviewsPerPage));
+        }
+      }).catch(error => {
+        console.log("Error:", error);
+      });
   }, [game])
+
+  const buyOrPlay = () => {
+    if (game.owned) {
+      fetch(`${utils.playURL}?userId=${utils.loggedUser.id}&gameId=${game.id}&hours=1`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: ""
+      })
+        .then(response => response.json())
+        .then(res => {
+          window.location.reload();
+        }).catch(error => {
+          console.log("Error:", error);
+        });
+    }
+    else {
+      fetch(`${utils.buyURL}?userId=${utils.loggedUser.id}&gameId=${game.id}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: ""
+      })
+        .then(response => response.json())
+        .then(res => {
+          window.location.reload();
+        }).catch(error => {
+          console.log("Error:", error);
+        });
+    }
+  }
 
   return (
     <div className='whole'>
@@ -69,7 +103,7 @@ export default function GameSection({ game }) {
           <div className='section-title'>{game.name}</div>
           <div style={{ position: "absolute", top: "260px", marginLeft: "50px" }}>
             <div style={{ marginBottom: "20px" }}>
-              <button className='buy-button'>{game.owned === true ? "Play game" : "Buy now!"}</button>
+              <button className='buy-button' onClick={utils.loggedUser.id == 0 ? clickLogin : buyOrPlay}>{game.owned === true ? "Play game" : "Buy now!"}</button>
             </div>
             <div>
               <img className="section-imgs" style={{ backgroundImage: `url(${img})` }} />
@@ -131,10 +165,10 @@ export default function GameSection({ game }) {
             <div className='hrs-and-last'>
               {game.hoursPlayed + " "}hrs onr record
               <div style={{ display: "inline", marginLeft: "150px" }}>{game.lastPlayed == 0 || game.lastPlayed == null || game.lastPlayed == "" ? "Never played" : "Last played on " + (new Date(game.lastPlayed)).toLocaleString("en-UK", { day: "numeric", month: "short" })}</div>
-              {reviews.length==0 || reviews.length>0 && reviews[0].userId!==utils.loggedUser.id && game.owned ?
-                  <button className='leave-review' onClick={clickReview}>Leave a review</button> : <div/>
+              {reviews.length == 0 || reviews.length > 0 && reviews[0].userId !== utils.loggedUser.id && game.owned ?
+                <button className='leave-review' onClick={clickReview}>Leave a review</button> : <div />
               }
-              
+
             </div>}
         </div> : <div />
       }

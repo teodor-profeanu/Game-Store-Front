@@ -37,7 +37,8 @@ export default function ProfilePage() {
         .then(response => response.json())
         .then(res => {
         if(res.status!==200){
-            return (<div></div>);
+            if(id === utils.loggedUser.id)
+                localStorage.setItem("user", "");
         }
         else{
             tempUser = res.object;

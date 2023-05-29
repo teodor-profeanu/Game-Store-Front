@@ -1,10 +1,12 @@
 import React from 'react'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import * as utils from './Utils';
+import './Store.css';
 
 export default function FrontPage() {
 
     const { clickLogin } = utils.useLogin();
+    const { clickRegister } = utils.useRegister();
     const { clickHome } = utils.useHome();
     const { clickStore } = utils.useStore();
 
@@ -18,6 +20,12 @@ export default function FrontPage() {
           <button className="ribbon-button" onClick={clickLogin}>Profile</button>
         </div>
         <div className="rectangle1"></div>
+        <div className='big-title'>
+          Welcome to Scheme
+          <button className='login-button2' onClick={clickLogin}>Sign in</button>
+          <button className='login-button2' onClick={clickRegister}>Register</button>
+        </div>
+        
       </div>
       </ThemeProvider>
     </div>

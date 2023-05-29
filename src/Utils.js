@@ -11,6 +11,15 @@ export const getReviewsURL = "http://localhost:8080/reviews"
 export const deleteReviewURL = "http://localhost:8080/review/delete"
 export const addReviewURL = "http://localhost:8080/review/add"
 
+export const featuredURL = "http://localhost:8080/game/featured"
+export const trendingURL = "http://localhost:8080/game/trending"
+export const newReleasesURL = "http://localhost:8080/game/new-releases"
+export const topSellersURL = "http://localhost:8080/game/top-sellers"
+export const searchURL = "http://localhost:8080/game/search"
+export const tagsURL = "http://localhost:8080/tags"
+export const buyURL = "http://localhost:8080/game/buy"
+export const playURL = "http://localhost:8080/game/play"
+
 export const theme = createTheme({
     palette: {
       primary: {
@@ -90,6 +99,16 @@ export const useLogin = () => {
     };
     return {
         clickChange
+    };
+  };
+
+  export const useRegister = () => {
+    const navigate = useNavigate();
+    const clickRegister = () => {
+      navigate('/register');
+    };
+    return {
+      clickRegister
     };
   };
 

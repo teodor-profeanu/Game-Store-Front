@@ -242,3 +242,34 @@ body {
     margin-top: 20px;
     text-align: center;
   }
+
+  .big-title{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 200;
+    font-size: 70px;
+  }
+
+  .login-button2{
+    background: linear-gradient(to right, #06beff, #2d73ff);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    width: 240px;
+    font-size: 17px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    margin-top: 40px;
+    position: relative;
+    top: -120px;
+    left: 15px;
+    margin: 50px;
+  }
+
+  .login-button2:hover{
+    background: linear-gradient(to right, #55d2ff, #2d73ff);
+  }

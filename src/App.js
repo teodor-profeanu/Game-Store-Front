@@ -8,7 +8,6 @@ import Edit from './Edit';
 import ChangePass from './ChangePass';
 import GamePage from './GamePage';
 import ScrollToTop from './ScrollToTop';
-import * as utils from './Utils';
 import LeaveReview from './LeaveReview';
 
 function App() {

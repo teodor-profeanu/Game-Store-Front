@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react'
 import './Store.css';
 import './Login.css';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import * as utils from './Utils';
 
